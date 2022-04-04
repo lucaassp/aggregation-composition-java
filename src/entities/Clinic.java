@@ -13,6 +13,6 @@ public class Clinic {
 
 
 	public Chart getChart(Patient patient) {
-		return chart.get(patient);
+		return chart.get (patient);
 	}
 }

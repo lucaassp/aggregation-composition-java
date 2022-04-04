@@ -2,10 +2,10 @@ package entities;
 
 import java.util.Calendar;
 
-public class Consultation {
+public class Consultation implements Event {
 	
 	private Chart chart;
-	private String descripition;
+	private String registerConsultation;
 	private Calendar data;
 	
 	public Consultation(Chart chart) {
@@ -22,11 +22,16 @@ public class Consultation {
 	}
 
 	public String getDescripition() {
-		return descripition;
+		return chart.getPatient().getName();
+	}
+	
+	
+	public String getRegisterConsultation() {
+		return registerConsultation;
 	}
 
-	public void setDescripition(String descripition) {
-		this.descripition = descripition;
+	public void setRegisterConsultation(String registerConsultation) {
+		this.registerConsultation = registerConsultation;
 	}
 
 	public Calendar getData() {
@@ -36,6 +41,8 @@ public class Consultation {
 	public void setData(Calendar data) {
 		this.data = data;
 	}
-	
-	
+
+	public Calendar getDate() {
+		return data;
+	}
 }
